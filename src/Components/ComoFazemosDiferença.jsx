@@ -25,14 +25,14 @@ const ComoFazemosDiferenca = () => {
               ))}
             </ul>
 
-            <button className="bg-white text-[#1B4B96] font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300 shadow-lg">
+           
             <Link
   to="/solicitar-demonstracao"
   className="inline-block w-full bg-white text-[#1B4B96] font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300 shadow-lg text-center"
 >
   Solicite uma demonstração
 </Link>
-            </button>
+           
           </div>
 
           <div className="w-full lg:w-1/2">
