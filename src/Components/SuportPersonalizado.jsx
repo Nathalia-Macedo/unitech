@@ -27,8 +27,8 @@ const SuportePersonalizado = () => {
             ))}
           </div>
           <div className="relative">
-            <div className="w-4/5 aspect-square bg-gradient-to-br from-[#1B4B96] to-[#42B7E9] rounded-full flex items-center justify-center mx-auto">
-              <HeadphonesIcon className="w-1/2 h-1/2 text-white" />
+            <div className="w-full max-w-md aspect-square bg-gradient-to-br from-[#1B4B96] to-[#42B7E9] rounded-full flex items-center justify-center mx-auto">
+              <HeadphonesIcon className="w-1/3 h-1/3 text-white" />
             </div>
           </div>
         </div>
