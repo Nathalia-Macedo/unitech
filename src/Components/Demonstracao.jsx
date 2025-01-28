@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Shield, Check, ArrowLeft } from "lucide-react"
 import { Link } from "react-router-dom"
 
@@ -13,6 +13,10 @@ const SolicitarDemonstracao = () => {
 
   const [errors, setErrors] = useState({})
   const [isSubmitted, setIsSubmitted] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -80,7 +84,6 @@ const SolicitarDemonstracao = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#1B4B96] to-[#42B7E9]">
       <header className="bg-white py-4 px-6 flex justify-between items-center">
-        
         <Link to="/" className="text-[#1B4B96] hover:text-[#42B7E9] transition-colors flex items-center">
           <ArrowLeft className="mr-2" /> Voltar ao Início
         </Link>
