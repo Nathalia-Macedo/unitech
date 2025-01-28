@@ -1,6 +1,6 @@
 import React from "react"
 import { Zap, Store, BarChart2 } from "lucide-react"
-
+import ERP from '../Assets/image1.png'
 const ProblemsSection = () => {
   return (
     <section className="bg-gradient-to-br from-[#1B4B96] to-[#42B7E9] py-16 md:py-24">
