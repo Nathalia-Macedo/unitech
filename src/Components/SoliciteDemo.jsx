@@ -1,6 +1,6 @@
 import React from "react"
 import { ArrowRight, MessageCircle } from "lucide-react"
-
+import { Link } from "react-router-dom"
 const SoliciteDemo = () => {
   return (
     <section id="contato" className="py-16 md:py-24 bg-gradient-to-br from-[#1B4B96] to-[#42B7E9] relative overflow-hidden">
@@ -20,13 +20,13 @@ const SoliciteDemo = () => {
             sua eficiência e lucratividade.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a
-              href="#contato"
+            <Link
+              to="/solicitar-demonstracao"
               className="bg-white text-[#1B4B96] font-semibold py-3 px-8 rounded-full hover:bg-opacity-90 transition duration-300 shadow-lg flex items-center justify-center group"
             >
               Agende Sua Demonstração Exclusiva
               <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
             <a
               href="https://wa.me/11933787147"
               target="_blank"
