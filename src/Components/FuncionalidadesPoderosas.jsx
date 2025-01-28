@@ -1,15 +1,33 @@
-import React,{useEffect} from "react"
-import { FileText, ArrowUpDown, PieChart, BuildingIcon as Buildings, CreditCard, ShieldCheck } from "lucide-react"
-import { Link } from "react-router-dom"
- 
+import React, { useEffect, useRef } from "react"
+import {
+  FileText,
+  ArrowUpDown,
+  PieChart,
+  BuildingIcon as Buildings,
+  CreditCard,
+  ShieldCheck,
+  ArrowRight,
+} from "lucide-react"
+import { Link, useLocation } from "react-router-dom"
+
 const FuncionalidadesPoderosas = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+  const location = useLocation()
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    if (location.hash === "#funcionalidades") {
+      setTimeout(() => {
+        sectionRef.current?.scrollIntoView({ behavior: "smooth" })
+      }, 100)
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [location])
+
   return (
-    <section  className="py-16 md:py-24 bg-gray-50">
+    <section ref={sectionRef} id="funcionalidades" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 id="funcionalidades" className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 text-[#1B4B96] font-outfit">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 text-[#1B4B96] font-outfit">
           Tudo o que Você Precisa em um Só Lugar
         </h2>
         <p className="text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 text-gray-700">
@@ -23,9 +41,13 @@ const FuncionalidadesPoderosas = () => {
         </div>
 
         <div className="text-center">
-          <button className="bg-white border-2 border-[#1B4B96] text-[#1B4B96] font-semibold py-3 px-8 rounded-full hover:bg-[#1B4B96] hover:text-white transition duration-300 shadow-md">
-           <Link to="/funcionalidades"> Confira Todas as Funcionalidades</Link>
-          </button>
+          <Link
+            to="/funcionalidades"
+            className="inline-flex items-center bg-white border-2 border-[#1B4B96] text-[#1B4B96] font-semibold py-3 px-8 rounded-full hover:bg-[#1B4B96] hover:text-white transition duration-300 shadow-md"
+          >
+            Confira Todas as Funcionalidades
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
         </div>
       </div>
     </section>
