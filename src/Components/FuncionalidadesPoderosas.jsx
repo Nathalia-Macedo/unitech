@@ -1,7 +1,11 @@
-import React from "react"
+import React,{useEffect} from "react"
 import { FileText, ArrowUpDown, PieChart, BuildingIcon as Buildings, CreditCard, ShieldCheck } from "lucide-react"
 import { Link } from "react-router-dom"
+ 
 const FuncionalidadesPoderosas = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
   return (
     <section  className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
