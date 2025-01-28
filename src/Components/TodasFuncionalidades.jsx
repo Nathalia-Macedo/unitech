@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import {
@@ -31,6 +31,10 @@ const FeatureItem = ({ icon: Icon, title, description }) => (
 )
 
 const TodasFuncionalidades = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const features = [
     {
       icon: DollarSign,
