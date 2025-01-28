@@ -57,5 +57,5 @@ const HighlightCard = ({ icon, title, description }) => (
   </div>
 )
 
-export default ProblemsSection
+export default ProblemsSection;
 
