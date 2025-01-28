@@ -1,10 +1,10 @@
 import React from "react"
 import { Zap, Store, BarChart2 } from "lucide-react"
-import ERP from '../Assets/image1.png'
+
 const ProblemsSection = () => {
   return (
     <section className="bg-gradient-to-br from-[#1B4B96] to-[#42B7E9] py-16 md:py-24">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 font-outfit">
           Sabemos os desafios do seu dia a dia.
         </h2>
@@ -12,7 +12,7 @@ const ProblemsSection = () => {
           Está enfrentando lentidão no caixa? Ferramentas limitadas que complicam a rotina? Gestão financeira confusa e
           pouco integrada? Nosso ERP foi criado para resolver tudo isso.
         </p>
-        <div className="flex flex-col lg:flex-row gap-8 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
           <div className="w-full lg:w-1/2 space-y-6">
             <HighlightCard
               icon={<Zap className="w-8 h-8 text-[#42B7E9]" />}
@@ -30,12 +30,14 @@ const ProblemsSection = () => {
               description="Monitore suas finanças e estoque em tempo real para tomar decisões informadas."
             />
           </div>
-          <div className="w-full lg:w-1/2">
-            <img
-              src={ERP}
-              alt={ERP}
-              className="rounded-lg shadow-xl w-full h-full object-cover"
-            />
+          <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="w-full max-w-md">
+              <img
+                src={ERP || "/placeholder.svg"}
+                alt="ERP Dashboard"
+                className="rounded-lg shadow-xl w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
