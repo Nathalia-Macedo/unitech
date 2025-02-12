@@ -32,7 +32,6 @@ const SolicitarDemonstracao = () => {
     if (!formData.empresa.trim()) errors.empresa = "Nome da empresa é obrigatório"
     if (!formData.email.trim()) errors.email = "E-mail é obrigatório"
     else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = "E-mail inválido"
-    if (!formData.whatsapp.trim()) errors.whatsapp = "WhatsApp é obrigatório"
     else if (!/^\d{10,11}$/.test(formData.whatsapp.replace(/\D/g, ""))) errors.whatsapp = "WhatsApp inválido"
     return errors
   }
